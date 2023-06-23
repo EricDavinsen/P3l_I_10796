@@ -77,7 +77,6 @@ class JadwalInstrukturActivity : AppCompatActivity() {
                 binding.srJadwalinstruktur.isRefreshing = false
 
                 if (!data_array.isEmpty()) {
-//                    Toast.makeText(this@ScheduleInstructorActivity, "Data Berhasil Diambil!", Toast.LENGTH_SHORT).show()
                     MotionToast.darkToast(
                         this, "Notification Display!",
                         jo.getString("message"),

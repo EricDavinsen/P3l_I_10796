@@ -71,6 +71,5 @@ class JadwalInstrukturAdapter(private var instructors: List<JadwalInstruktur>, c
             tvTanggal = view.findViewById(R.id.text_tanggal_kelas_instructor_presensi)
             cvSchedule = view.findViewById(R.id.cv_schedule_instructor_presensi)
         }
-
     }
 }

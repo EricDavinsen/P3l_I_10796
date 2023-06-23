@@ -102,7 +102,7 @@ class MainActivity : AppCompatActivity() {
                             .apply()
                         FancyToast.makeText(this,sharedPreferences.getString("role",null),FancyToast.LENGTH_LONG,FancyToast.SUCCESS,false).show()
                         val move = Intent(this@MainActivity, HomeActivity::class.java)
-//                        move.putExtra("nama", etNama)
+
                         startActivity(move)
                     }else if(userObjectData.has("ID_INSTRUKTUR")){
                         val token = jsonObj.getString("access_token")
@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
                         val move = Intent(this@MainActivity, HomeActivity::class.java)
                         startActivity(move)
                     }
-//                    FancyToast.makeText(this, "Data ditemukan", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, false).show()
+
 
                 }, Response.ErrorListener { error ->
                     try {

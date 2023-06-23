@@ -108,14 +108,14 @@ class MenuUmum : AppCompatActivity() {
                         )
                     )
                 } catch (e: Exception){
-//
+
                 }
             }){
             @Throws(AuthFailureError::class)
             override fun getHeaders(): Map<String, String> {
                 val headers = HashMap<String, String>()
                 headers["Accept"] = "application/json"
-//                headers["Authorization"] = "Bearer " + sharedPreferences.getString("token",null);
+
                 return headers
             }
         }

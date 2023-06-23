@@ -90,7 +90,6 @@ class BookingKelasActivity : AppCompatActivity() {
                 binding.srBooking.isRefreshing = false
 
                 if (!data_array.isEmpty()) {
-//                    Toast.makeText(this@JanjiTemuActivity, "Data Berhasil Diambil!", Toast.LENGTH_SHORT).show()
                     MotionToast.darkToast(
                         this, "Notification Display!",
                         "Succesfully get data",

@@ -56,9 +56,6 @@ class IzinInstrukturAdapter(private var permissions: List<IzinInstruktur>, conte
         return permissions.size
     }
 
-//    fun setPermissionList(permissionss: Array<IzinInstruktur>){
-//        this.permissions = permissionss.toList()
-//    }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         var tvKeterangan: TextView

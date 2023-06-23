@@ -47,7 +47,7 @@ class PresensiInstrukturActivity : AppCompatActivity() {
     }
 
     private fun allData() {
-//        binding.srPresensi.isRefreshing = true
+
         val stringRequest: StringRequest = object :
             StringRequest(Method.GET, PresensiInstrukturApi.GET_ALL_URL, Response.Listener { response ->
                 var jo = JSONObject(response.toString())
@@ -78,17 +78,17 @@ class PresensiInstrukturActivity : AppCompatActivity() {
                 rvPermission.setHasFixedSize(true)
                 rvPermission.adapter = adapter
 
-//                binding.srPresensi.isRefreshing = false
+
 
                 if (!data_array.isEmpty()) {
-//                    Toast.makeText(this@ScheduleInstructorActivity, "Data Berhasil Diambil!", Toast.LENGTH_SHORT).show()
+
 
                 }else {
 
                 }
 
             }, Response.ErrorListener { error ->
-//                binding.srPresensi.isRefreshing = true
+
                 try {
                     val responseBody = String(error.networkResponse.data, StandardCharsets.UTF_8)
                     val errors = JSONObject(responseBody)

@@ -50,7 +50,6 @@ class MemberProfilFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-//        sharedPreferences = activity?.getSharedPreferences("login", Context.MODE_PRIVATE)
 
         sharedPreferences = (activity as HomeActivity).getSharedPreferences()
 

@@ -27,7 +27,7 @@ class ForgotPassword : AppCompatActivity() {
         binding = ActivityForgotPasswordBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
         queue = Volley.newRequestQueue(this)
-//        setContentView(R.layout.activity_ganti_password)
+
         supportActionBar?.hide()
 
         binding.btnReset.setOnClickListener(View.OnClickListener  {

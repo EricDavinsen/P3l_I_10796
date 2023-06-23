@@ -82,6 +82,5 @@ class PresensiInstrukturAdapter (private var instructors: List<PresensiInstruktu
             btnStart = view.findViewById(R.id.btnStart)
 
         }
-
     }
 }

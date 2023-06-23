@@ -58,7 +58,5 @@ class HistoriAktivitasMemberAdapter(private var historys: List<AktivitasMember>,
             tvStatusBooking = view.findViewById(R.id.tv_status_konfirmasi)
             cvBook = view.findViewById(R.id.cv_book)
         }
-
     }
-
 }

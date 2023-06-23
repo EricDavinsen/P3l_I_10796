@@ -86,7 +86,7 @@ class PresensiBookingKelasActivity : AppCompatActivity() {
                 binding.srPresensiBooking.isRefreshing = false
 
                 if (!data_array.isEmpty()) {
-//                    Toast.makeText(this@JanjiTemuActivity, "Data Berhasil Diambil!", Toast.LENGTH_SHORT).show()
+
                     MotionToast.darkToast(
                         this, "Notification Display!",
                         "Succesfully get data",
@@ -117,7 +117,7 @@ class PresensiBookingKelasActivity : AppCompatActivity() {
                 try {
                     val responseBody = String(error.networkResponse.data, StandardCharsets.UTF_8)
                     val errors = JSONObject(responseBody)
-//                    Toast.makeText(this@JanjiTemuActivity, errors.getString("message"), Toast.LENGTH_SHORT).show()
+
                     MotionToast.darkToast(
                         this,"Notification Display!",
                         errors.getString("message"),
@@ -127,7 +127,6 @@ class PresensiBookingKelasActivity : AppCompatActivity() {
                         ResourcesCompat.getFont(this, www.sanju.motiontoast.R.font.helvetica_regular))
                     binding.srPresensiBooking.isRefreshing = false
                 } catch (e: Exception){
-//                    Toast.makeText(this@JanjiTemuActivity, e.message, Toast.LENGTH_SHORT).show()
                     MotionToast.darkToast(
                         this,"Notification Display!",
                         e.message.toString(),

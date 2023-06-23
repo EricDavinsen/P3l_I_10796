@@ -66,8 +66,5 @@ class HistoriAktivitasInstrukturAdapter(private var historys: List<AktivitasInst
             tvJam = view.findViewById(R.id.tv_jam)
             cvBook = view.findViewById(R.id.cv_book)
         }
-
     }
-
-
 }

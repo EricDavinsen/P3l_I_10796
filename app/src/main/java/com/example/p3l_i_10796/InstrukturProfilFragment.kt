@@ -48,8 +48,6 @@ class InstrukturProfilFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-//        sharedPreferences = activity?.getSharedPreferences("login", Context.MODE_PRIVATE)
-
         sharedPreferences = (activity as HomeActivity).getSharedPreferences()
 
         val id = sharedPreferences.getInt("id", 0)

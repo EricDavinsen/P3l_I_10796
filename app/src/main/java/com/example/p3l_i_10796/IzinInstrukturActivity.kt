@@ -82,7 +82,7 @@ class IzinInstrukturActivity : AppCompatActivity() {
                 binding.srIzinInstruktur.isRefreshing = false
 
                 if (!data_array.isEmpty()) {
-//                    Toast.makeText(this@JanjiTemuActivity, "Data Berhasil Diambil!", Toast.LENGTH_SHORT).show()
+
                     MotionToast.darkToast(
                         this, "Notification Display!",
                         "Succesfully get data",
@@ -113,7 +113,7 @@ class IzinInstrukturActivity : AppCompatActivity() {
                 try {
                     val responseBody = String(error.networkResponse.data, StandardCharsets.UTF_8)
                     val errors = JSONObject(responseBody)
-//                    Toast.makeText(this@JanjiTemuActivity, errors.getString("message"), Toast.LENGTH_SHORT).show()
+
                     MotionToast.darkToast(
                         this,"Notification Display!",
                         errors.getString("message"),
@@ -122,7 +122,7 @@ class IzinInstrukturActivity : AppCompatActivity() {
                         MotionToast.LONG_DURATION,
                         ResourcesCompat.getFont(this, www.sanju.motiontoast.R.font.helvetica_regular))
                 } catch (e: Exception){
-//                    Toast.makeText(this@JanjiTemuActivity, e.message, Toast.LENGTH_SHORT).show()
+
                     MotionToast.darkToast(
                         this,"Notification Display!",
                         e.message.toString(),

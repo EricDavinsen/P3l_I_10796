@@ -168,11 +168,11 @@ class BookingGymActivity : AppCompatActivity() {
 
 
     fun cancelBookingGym(id: String) {
-//        binding.srBooking.isRefreshing = true
+
         val stringRequest: StringRequest = object :
             StringRequest(Method.DELETE, MemberApi.BATALGYM + id, Response.Listener { response ->
                 var jo = JSONObject(response.toString())
-//                var history = arrayListOf<HistoryBookingClass>()
+
                 if (jo.getJSONObject("data") != null) {
                     MotionToast.darkToast(
                         this, "Notification Booking!",

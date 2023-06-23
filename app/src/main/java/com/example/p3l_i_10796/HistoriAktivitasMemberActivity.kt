@@ -48,13 +48,6 @@ class HistoriAktivitasMemberActivity : AppCompatActivity() {
             allData(id)
         }
 
-//        binding.btnAdd.setOnClickListener {
-//            val intent = Intent(this@PresensiMemberActivity, PresensiMemberActivity::class.java)
-//            sharedPreferences.edit()
-//                .putString("booking","yes")
-//                .apply()
-//            startActivity(intent)
-//        }
     }
 
     private fun allData(id: String) {
@@ -90,7 +83,6 @@ class HistoriAktivitasMemberActivity : AppCompatActivity() {
                 binding.srBooking.isRefreshing = false
 
                 if (!data_array.isEmpty()) {
-//                    Toast.makeText(this@JanjiTemuActivity, "Data Berhasil Diambil!", Toast.LENGTH_SHORT).show()
                     MotionToast.darkToast(
                         this, "Notification Display!",
                         "Succesfully get data",
@@ -121,7 +113,6 @@ class HistoriAktivitasMemberActivity : AppCompatActivity() {
                 try {
                     val responseBody = String(error.networkResponse.data, StandardCharsets.UTF_8)
                     val errors = JSONObject(responseBody)
-//                    Toast.makeText(this@JanjiTemuActivity, errors.getString("message"), Toast.LENGTH_SHORT).show()
                     MotionToast.darkToast(
                         this,"Notification Display!",
                         errors.getString("message"),
@@ -131,7 +122,6 @@ class HistoriAktivitasMemberActivity : AppCompatActivity() {
                         ResourcesCompat.getFont(this, www.sanju.motiontoast.R.font.helvetica_regular))
                     binding.srBooking.isRefreshing = false
                 } catch (e: Exception){
-//                    Toast.makeText(this@JanjiTemuActivity, e.message, Toast.LENGTH_SHORT).show()
                     MotionToast.darkToast(
                         this,"Notification Display!",
                         e.message.toString(),
