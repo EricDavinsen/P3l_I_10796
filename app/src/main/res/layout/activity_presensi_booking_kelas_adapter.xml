@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_book_presensi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="@color/softBlue"
+    app:cardUseCompatPadding="true">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/layoutrvbookclasspresensi"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_kode_presensi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="KODE_BOOKING"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/text_tanggal_presensi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Tanggal booking kelas"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_kode_presensi" />
+
+    <TextView
+        android:id="@+id/text_tanggal_melakukan_presensi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Tanggal melakukan booking"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_tanggal_presensi" />
+
+    <TextView
+        android:id="@+id/text_status_konfirmasi_presensi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        tools:text="Status konfirmasi - Waktu Konfirmasi"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_status" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        app:layout_constraintTop_toBottomOf="@+id/text_tanggal_melakukan_presensi"
+        android:hint="Status"
+        tools:ignore="MissingConstraints"
+        android:background="@color/softBlue"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        app:boxStrokeWidthFocused="1dp">
+
+      <AutoCompleteTextView
+          android:id="@+id/ed_status"
+          android:layout_width="150dp"
+          android:textColor="@color/black"
+          android:textSize="10dp"
+          android:layout_height="wrap_content"
+          android:focusableInTouchMode="true"
+          android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/icon_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_check_24"
+        android:padding="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/darkBlue"
+        app:layout_constraintStart_toEndOf="@+id/layout_status"
+        app:layout_constraintTop_toBottomOf="@id/text_tanggal_melakukan_presensi"
+        app:tint="#00ff00"
+        tools:ignore="MissingConstraints" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
